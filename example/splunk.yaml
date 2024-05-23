@@ -8,3 +8,5 @@ splunk-kubernetes-logging:
       token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # replace token here
       protocol: https
       insecureSSL: true
+  kubernetes:
+    clusterName: xxxxxxxx # replace clusterName here
