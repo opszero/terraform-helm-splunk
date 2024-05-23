@@ -1,0 +1,12 @@
+splunk-kubernetes-logging:
+  containers:
+    logFormatType: cri
+  splunk:
+    hec:
+      host: http-inputs-xxxxxxxxxx.splunkcloud.com #if you are enterprises you should add http-inputs
+      port: 443 #if you are enterprises port will 443 otherwise 8088
+      token: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx # replace token here
+      protocol: https
+      insecureSSL: true
+  kubernetes:
+    clusterName: xxxxxxxx # replace clusterName here
