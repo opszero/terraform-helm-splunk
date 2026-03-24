@@ -14,8 +14,23 @@ resource "helm_release" "splunk" {
     {
       name  = "splunk-kubernetes-metrics.enabled"
       value = false
+    },
+
+    {
+      name  = "splunk-kubernetes-logging.image.registry"
+      value = var.image.registry
+    },
+    {
+      name  = "splunk-kubernetes-logging.image.name"
+      value = var.image.name
+    },
+    {
+      name  = "splunk-kubernetes-logging.image.tag"
+      value = var.image.tag
+    },
+    {
+      name  = "splunk-kubernetes-logging.image.pullPolicy"
+      value = var.image.pullPolicy
     }
   ]
-
 }
-

@@ -17,3 +17,21 @@ variable "splunk_version" {
   default     = "1.5.4"
   description = "version of splunk helm chart."
 }
+
+
+variable "image" {
+  description = "Splunk logging image config"
+  type = object({
+    registry    = string
+    name        = string
+    tag         = string
+    pullPolicy  = string
+  })
+
+  default = {
+    registry   = "docker.io"
+    name       = "sohanyadav/fluentd-hec"
+    tag        = "1.3.3"
+    pullPolicy = "IfNotPresent"
+  }
+}
