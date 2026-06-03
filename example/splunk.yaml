@@ -1,4 +1,7 @@
 splunk-kubernetes-logging:
+  image:
+    repository: sohanyadav/fluentd-hec
+    tag: "1.3.3"
   containers:
     logFormatType: cri
   splunk:
